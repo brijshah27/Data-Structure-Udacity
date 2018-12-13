@@ -3,12 +3,8 @@ package Dynamic_Programming;
 import java.util.Arrays;
 
 public class Fibonacci_Sequence {
-    public static void main(String[] args){
-        int[] sequence = Get_fibonacci_sequence(10);
-        System.out.println(Arrays.toString(sequence));
-    }
 
-    public static int[] Get_fibonacci_sequence(int n){
+    public int[] Get_fibonacci_sequence(int n){
         int[] sequence = new int[n+1];
         sequence[0] = 0;
         sequence[1] = 1;
