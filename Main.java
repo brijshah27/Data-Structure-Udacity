@@ -1,4 +1,5 @@
 import Dynamic_Programming.Fibonacci_Sequence;
+import Dynamic_Programming.LCS;
 import Dynamic_Programming.LIS;
 
 import java.util.Arrays;
@@ -21,6 +22,15 @@ public class Main {
         int input_to_LIS[] = { 10, 22, 9, 33, 21, 50, 41, 60 };
         int lis_result = lis.LIS(input_to_LIS, input_to_LIS.length);
         System.out.println("LIS for "+Arrays.toString(input_to_LIS)+" is:"+lis_result);
+        System.out.println("\n\n\n");
+
+        //DP_Algorithm 3: Longest Common Sub-sequence.
+        System.out.println("<<<<Longest Common sub-sequence>>>>>");
+        LCS lcs = new LCS();
+        String s1= "ABCDGH";
+        String s2= "AEDFHR";
+        System.out.println("LCS for Strings "+s1 +" and "+s2);
+        System.out.println(lcs.LCS(s1,s2));
         System.out.println("\n\n\n");
     }
 }
