@@ -1,3 +1,4 @@
+import Dynamic_Programming.Contiguous_Subsequence;
 import Dynamic_Programming.Fibonacci_Sequence;
 import Dynamic_Programming.LCS;
 import Dynamic_Programming.LIS;
@@ -31,6 +32,14 @@ public class Main {
         String s2= "AEDFHR";
         System.out.println("LCS for Strings "+s1 +" and "+s2);
         System.out.println(lcs.LCS(s1,s2));
+        System.out.println("\n\n\n");
+
+        //DP_Algorithm 4: Contiguous subsequence max sum.
+        System.out.println("<<<<Contiguous max subsequence max sum>>>>>");
+        Contiguous_Subsequence CSS = new Contiguous_Subsequence();
+        int[] intput_sequence = {5, 15, -30, 10, -5, 40, 10};
+        int CSS_sum = CSS.get_Consecutive_Subsequence(intput_sequence);
+        System.out.println("Contiguous subsequence max sum of  "+ Arrays.toString(intput_sequence) +" is "+ CSS_sum);
         System.out.println("\n\n\n");
     }
 }
