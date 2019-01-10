@@ -1,7 +1,4 @@
-import Dynamic_Programming.Contiguous_Subsequence;
-import Dynamic_Programming.Fibonacci_Sequence;
-import Dynamic_Programming.LCS;
-import Dynamic_Programming.LIS;
+import Dynamic_Programming.*;
 
 import java.util.Arrays;
 
@@ -40,6 +37,24 @@ public class Main {
         int[] intput_sequence = {5, 15, -30, 10, -5, 40, 10};
         int CSS_sum = CSS.get_Consecutive_Subsequence(intput_sequence);
         System.out.println("Contiguous subsequence max sum of  "+ Arrays.toString(intput_sequence) +" is "+ CSS_sum);
+        System.out.println("\n\n\n");
+
+        //DP_Algorithm 5: Optimal Penalties to travel.
+        //Problem statement:
+        //You are going on a long trip. You start on the road at mile post 0.
+        //Along the way there are n hotels, at mile posts a1 < a2 < . . . < an, where each ai is measured from the starting point.
+        //The only places you are allowed to stop are at these hotels, but you can choose which of the hotels you stop at.
+        //You must stop at the final hotel (at distance an), which is your destination.
+        //You’d ideally like to travel 200 miles a day, but this may not be possible (depending on the spacing of the hotels).
+        //If you travel x miles during a day, the penalty for that day is (200 − x)2 .
+        //You want to plan your trip so as to minimize the total penalty- that is, the sum, over all travel days, of the daily penalties.
+        //Give an efficient algorithm that determines the optimal sequence of hotels at which to stop.
+
+        System.out.println("<<<<Optimal Penalties to travel>>>>>");
+        Optimal_Penalties_Travel OPT = new Optimal_Penalties_Travel();
+        int[] hotels = {190, 420, 550, 660, 670 };
+        int penalties = OPT.get_penalties(hotels);
+        System.out.println("Optimal Penalties to travel from hotels at "+ Arrays.toString(hotels) +" miles is "+ penalties);
         System.out.println("\n\n\n");
     }
 }
