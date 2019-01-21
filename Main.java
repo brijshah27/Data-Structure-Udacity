@@ -56,5 +56,19 @@ public class Main {
         int penalties = OPT.get_penalties(hotels);
         System.out.println("Optimal Penalties to travel from hotels at "+ Arrays.toString(hotels) +" miles is "+ penalties);
         System.out.println("\n\n\n");
+
+        //DP_Algorithm 6: KnapSack problem
+        //Given array of values and weight.
+        //Find group of items with max value with capacity of given total weight.
+        //Return max value that can be put in KnapSack.
+        //No repetition of items allowed.
+        System.out.println("<<<<KnapSack no repetition>>>>>");
+        int val[] = new int[]{60, 100, 120};
+        int wt[] = new int[]{10, 20, 30};
+        int  W = 50;
+        int n = val.length;
+        int knapSack = new Knapsack_No_Repeat().get_Knapsack(W, wt,val, n);
+        System.out.println("Max value that can be hold in knapSack is: "+knapSack);
+        System.out.println("\n\n\n");
     }
 }
